@@ -12,15 +12,15 @@ const Navbar = () => {
             </div>
 
             <div className='flex gap-3'>
-                <NavLink to={"/"} className={({isActive}) => `flex items-center py-1 px-2 rounded-md gap-1 ${isActive ? "text-white bg-green-900" : ""}` }>
+                <NavLink to={"/"} className={({isActive}) => `flex items-center  px-3 rounded-md gap-1 ${isActive ? "text-white bg-green-900" : ""}` }>
                     <GrHomeRounded />
                     Home
                 </NavLink>
-                <NavLink to={"/timeline"} className={({isActive}) => `flex items-center py-1 px-2 rounded-md gap-1 ${isActive ? "text-white bg-green-900" : ""}` }>
+                <NavLink to={"/timeline"} className={({isActive}) => `flex items-center  px-3 rounded-md gap-1 ${isActive ? "text-white bg-green-900" : ""}` }>
                     <MdOutlineTimeline />
                     timeline
                 </NavLink>
-                <NavLink to={"/stats"} className={({isActive}) => `flex items-center py-1 px-2 rounded-md gap-1 ${isActive ? "text-white bg-green-900" : ""}` }>
+                <NavLink to={"/stats"} className={({isActive}) => `flex items-center  px-3 rounded-md gap-1 ${isActive ? "text-white bg-green-900" : ""}` }>
                     <IoIosStats />
                     stats
                 </NavLink>

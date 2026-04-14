@@ -5,6 +5,9 @@ import App from './App.jsx'
 import { RouterProvider } from 'react-router/dom'
 import { createBrowserRouter } from 'react-router'
 import RootLayout from './layout/RootLayout.jsx'
+import Home from './pages/home/Home.jsx'
+import Timeline from './pages/timeline/Timeline.jsx'
+import Stats from './pages/stats/Stats.jsx'
 
 
 const router = createBrowserRouter([
@@ -14,15 +17,15 @@ const router = createBrowserRouter([
     children: [
       {
         index:true,
-        element: <div>Home</div>,
+        Component: Home ,
       }
       ,{
         path: "/timeline",
-        element: <div>timeline</div>,
+        Component: Timeline,
       },
       {
         path: "/stats",
-        element: <div>stats</div>,
+        Component: Stats,
       }
     ]
   },
