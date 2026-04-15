@@ -8,6 +8,7 @@ import RootLayout from './layout/RootLayout.jsx'
 import Home from './pages/home/Home.jsx'
 import Timeline from './pages/timeline/Timeline.jsx'
 import Stats from './pages/stats/Stats.jsx'
+import FriendDetails from './pages/friendDetails/FriendDetails.jsx'
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/stats",
         Component: Stats,
+      },
+      {
+        path:"friends/:id",
+        Component:FriendDetails,
       }
     ]
   },

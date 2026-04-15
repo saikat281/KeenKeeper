@@ -1,27 +1,24 @@
-import React, { useEffect, useState } from 'react';
+
 import DisplayFriends from './DisplayFriends';
+import { BounceLoader } from 'react-spinners';
+import FriendsHook from '../../../hooks/FriendsHook';
 
 const Friends = () => {
 
-    const [friends,setFriends] = useState([])
-    useEffect(()=>{
-        const fetchData = async()=>{
-            const res = await fetch("/data.json");
-            const data = await res.json();
-            setFriends(data);
-        }
-        fetchData();
-    },[])
+    const {friends,loading} = FriendsHook()
     console.log(friends);
     return (
-        <div>
+        <div className='container mx-auto'>
             <h1>Your Friends</h1>
+            {loading ? <div className='h-[100px] flex justify-center items-center'> <BounceLoader color="#244D3F" /> </div> : 
             <div className='grid  grid-cols-4 gap-4'>
                 {
-                    friends.map(friend=> <DisplayFriends friend={friend} key={friend.id}></DisplayFriends>)
+                    friends.map(friend => <DisplayFriends friend={friend} key={friend.id}></DisplayFriends>)
                 }
             </div>
-            
+            }
+
+
         </div>
     );
 };
