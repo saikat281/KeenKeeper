@@ -6,7 +6,7 @@ import FriendsHook from '../../../hooks/FriendsHook';
 const Friends = () => {
 
     const {friends,loading} = FriendsHook()
-    console.log(friends);
+
     return (
         <div className='container mx-auto'>
             <h1>Your Friends</h1>

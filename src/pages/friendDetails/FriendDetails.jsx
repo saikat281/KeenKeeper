@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router';
 import FriendsHook from '../../hooks/FriendsHook';
 import { BounceLoader } from 'react-spinners';
@@ -7,10 +7,12 @@ import { FaArchive, FaVideo } from 'react-icons/fa';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { IoCallOutline } from 'react-icons/io5';
 import { IoMdText } from 'react-icons/io';
+import { InstallContextTimeline } from '../../context/TimelineContext';
+import toast from 'react-hot-toast';
 
 const FriendDetails = () => {
     const { id } = useParams();
-    console.log(id);
+    //console.log(id);
     const { friends, loading } = FriendsHook()
 
     const expected = friends.find(friend => friend.id == id);
@@ -20,6 +22,19 @@ const FriendDetails = () => {
         else if (status === "almost due") return `bg-amber-500 px-4 py-1  rounded-xl text-white font-light rounded-md`
         return `bg-green-600 px-4 py-1  rounded-xl text-white font-light rounded-md`
     }
+
+    const {timeline,setTimeline} = useContext(InstallContextTimeline)
+    const handleCheckIn = (status)=>{
+        
+        const checkInData = {
+            status: status,
+            name:expected.name,
+            date: new Date().toLocaleDateString() 
+        };
+        setTimeline([...timeline,checkInData]);
+        toast.success(`${status} with ${expected.name}!`);
+    }
+    //console.log(timeline);
     return (
 
         <div>
@@ -42,15 +57,15 @@ const FriendDetails = () => {
                             <p className='text-gray-800'>preffered: Email</p>
                         </div>
                         <div className='space-y-2'>
-                            <div className='flex justify-center items-center w-full p-6 shadow-sm gap-1 cursor-pointer'>
+                            <button  className='flex justify-center items-center w-full p-6 shadow-sm gap-1 cursor-pointer'>
                                 <MdOutlineSnooze />   Snooze: 2 Weeks
-                            </div>
-                            <div className='flex justify-center items-center w-full p-6 shadow-sm gap-1 cursor-pointer'>
+                            </button>
+                            <button className='flex justify-center items-center w-full p-6 shadow-sm gap-1 cursor-pointer'>
                                 <FaArchive />   Archive
-                            </div>
-                            <div className='flex justify-center items-center w-full p-6 shadow-sm text-red-500 gap-1 cursor-pointer'>
+                            </button>
+                            <button  className='flex justify-center items-center w-full p-6 shadow-sm text-red-500 gap-1 cursor-pointer'>
                                 <RiDeleteBin6Line />   Delete
-                            </div>
+                            </button>
                         </div>
 
 
@@ -82,9 +97,9 @@ const FriendDetails = () => {
                         <div className='shadow p-4'>
                             <p className='text-green-900 font-semibold mb-2'>Quick Check-In</p>
                             <div className='flex justify-between items-center'>
-                                <button className='bg-blue-50 px-20 py-6 rounded-lg flex flex-col items-center text-[20px]'><IoCallOutline /> <span>Call</span> </button>
-                                <button className='bg-blue-50 px-20 py-6 rounded-lg flex flex-col items-center text-[20px]'><IoMdText /> <span>Text</span> </button>
-                                <button className='bg-blue-50 px-20 py-6 rounded-lg flex flex-col items-center text-[20px]'><FaVideo /> <span>Video</span> </button>
+                                <button onClick={()=> handleCheckIn("call")} className='bg-blue-50 px-20 py-6 rounded-lg flex flex-col items-center text-[20px] cursor-pointer'><IoCallOutline /> <span>Call</span> </button>
+                                <button onClick={()=> handleCheckIn("text")} className='bg-blue-50 px-20 py-6 rounded-lg flex flex-col items-center text-[20px] cursor-pointer'><IoMdText /> <span>Text</span> </button>
+                                <button onClick={()=> handleCheckIn("video")} className='bg-blue-50 px-20 py-6 rounded-lg flex flex-col items-center text-[20px] cursor-pointer'><FaVideo /> <span>Video</span> </button>
                             </div>
                         </div>
 

@@ -9,6 +9,7 @@ import Home from './pages/home/Home.jsx'
 import Timeline from './pages/timeline/Timeline.jsx'
 import Stats from './pages/stats/Stats.jsx'
 import FriendDetails from './pages/friendDetails/FriendDetails.jsx'
+import TimelineContextProvider from './context/TimelineContextProvider.jsx'
 
 
 const router = createBrowserRouter([
@@ -17,10 +18,10 @@ const router = createBrowserRouter([
     Component: RootLayout,
     children: [
       {
-        index:true,
-        Component: Home ,
+        index: true,
+        Component: Home,
       }
-      ,{
+      , {
         path: "/timeline",
         Component: Timeline,
       },
@@ -29,8 +30,8 @@ const router = createBrowserRouter([
         Component: Stats,
       },
       {
-        path:"friends/:id",
-        Component:FriendDetails,
+        path: "friends/:id",
+        Component: FriendDetails,
       }
     ]
   },
@@ -38,7 +39,10 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
+  <TimelineContextProvider>
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>,
+  </TimelineContextProvider>
+
 )
