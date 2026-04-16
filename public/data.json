@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Daniel Carter",
-    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "picture": "https://i.ibb.co.com/r2mqgK9p/1.png",
     "email": "daniel.carter@gmail.com",
     "days_since_contact": 18,
     "status": "overdue",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Emily Watson",
-    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "picture": "https://i.ibb.co.com/6LhrhtX/2.png",
     "email": "emily.watson@yahoo.com",
     "days_since_contact": 12,
     "status": "almost due",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Michael Thompson",
-    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+    "picture": "https://i.ibb.co.com/39z0dV5v/3.png",
     "email": "michael.t@gmail.com",
     "days_since_contact": 5,
     "status": "on-track",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "name": "Sophia Martinez",
-    "picture": "https://randomuser.me/api/portraits/women/65.jpg",
+    "picture": "https://i.ibb.co.com/d4DjJbbt/4.png",
     "email": "sophia.martinez@gmail.com",
     "days_since_contact": 21,
     "status": "overdue",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "name": "James Anderson",
-    "picture": "https://randomuser.me/api/portraits/men/54.jpg",
+    "picture": "https://i.ibb.co.com/HTBcmHXQ/5.png",
     "email": "james.anderson@outlook.com",
     "days_since_contact": 9,
     "status": "on-track",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "name": "Olivia Bennett",
-    "picture": "https://randomuser.me/api/portraits/women/23.jpg",
+    "picture": "https://i.ibb.co.com/4qbxJq9/6.png",
     "email": "olivia.bennett@gmail.com",
     "days_since_contact": 13,
     "status": "almost due",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "name": "William Turner",
-    "picture": "https://randomuser.me/api/portraits/men/81.jpg",
+    "picture": "https://i.ibb.co.com/NdBNrSjg/7.png",
     "email": "william.turner@gmail.com",
     "days_since_contact": 30,
     "status": "overdue",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "name": "Isabella Collins",
-    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "picture": "https://i.ibb.co.com/PvM1rZ8C/8.png",
     "email": "isabella.collins@gmail.com",
     "days_since_contact": 6,
     "status": "on-track",
