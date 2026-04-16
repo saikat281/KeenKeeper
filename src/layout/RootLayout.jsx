@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router';
 import Navbar from '../Components/Shared/Navbar';
 import { Toaster } from 'react-hot-toast';
+import Footer from '../Components/Shared/Footer';
 
 const RootLayout = () => {
     return (
@@ -11,7 +12,7 @@ const RootLayout = () => {
             {/* dynamic */}
             <Outlet></Outlet>
 
-            <h1>Footer</h1>
+            <Footer></Footer>
 
 
             <Toaster></Toaster>

@@ -10,6 +10,7 @@ import Timeline from './pages/timeline/Timeline.jsx'
 import Stats from './pages/stats/Stats.jsx'
 import FriendDetails from './pages/friendDetails/FriendDetails.jsx'
 import TimelineContextProvider from './context/TimelineContextProvider.jsx'
+import ErrorPage from './pages/errorPage/ErrorPage.jsx'
 
 
 const router = createBrowserRouter([
@@ -33,7 +34,8 @@ const router = createBrowserRouter([
         path: "friends/:id",
         Component: FriendDetails,
       }
-    ]
+    ],
+    errorElement: <ErrorPage/>
   },
 
 ]);

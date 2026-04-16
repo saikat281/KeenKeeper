@@ -18,10 +18,10 @@ const Timeline = () => {
 
     return (
         <div className='container mx-auto mt-16'>
-            <h1 className='text-3xl font-bold mb-3'>Timeline </h1>
+            <h1 className='text-4xl font-bold mb-3 text-center lg:text-start'>Timeline </h1>
 
-            <details className="dropdown">
-                <summary className="btn m-1 text-gray-600">Filter Timeline <IoIosArrowDown /></summary>
+            <details className="dropdown  w-full flex justify-center lg:justify-start">
+                <summary className="btn m-1 text-gray-600 ">Filter Timeline <IoIosArrowDown /></summary>
                 <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                     <li onClick={() => setFilter("call")}><a>call</a></li>
                     <li onClick={() => setFilter("text")}><a>text</a></li>
@@ -29,7 +29,7 @@ const Timeline = () => {
                 </ul>
             </details>
 
-            <div className='space-y-6 mt-30'>
+            <div className='space-y-6 mt-30 '>
                 {
                     filterData.map((data, idx) => {
                         return (

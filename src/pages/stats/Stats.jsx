@@ -19,9 +19,9 @@ const Stats = () => {
     ]
     return (
         <div className='container mx-auto mt-24 h-[70vh]'>
-            <h1 className='text-4xl font-bold'>Friendship Analysis</h1>
+            <h1 className='text-4xl font-bold text-center lg:text-start'>Friendship Analysis</h1>
             <div className=' mt-10 bg-blue-50 p-10 rounded-lg'>
-                <p className='text-green-800 font-semibold text-[20px]'>By Interaction Type</p>
+                <p className='text-green-800 font-semibold text-[20px] text-center lg:text-start'>By Interaction Type</p>
                 <div className='flex flex-col justify-center items-center'>
                     <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '40vh', aspectRatio: 1 }} responsive>
                         <Pie
