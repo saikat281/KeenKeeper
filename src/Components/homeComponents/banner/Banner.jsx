@@ -6,6 +6,7 @@ const Banner = () => {
         <div className='  pt-30'>
             <div className='container mx-auto p-10 space-y-6'>
                 <div className='text-center space-y-3'>
+                    <h1 className='text-5xl font-bold'>Friends to keep close in your life</h1>
                     <p className='text-gray-500'>Your personal shelf of meaningful connections. Browse, tend, and nurture the <br />
                         relationships that matter most.</p>
                     <button className='btn bg-green-900 text-white border-none'><FaPlus /> Add a Friend</button>
